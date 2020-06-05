@@ -1,6 +1,8 @@
 # eat-da-burger
 Week 13 Assignment
 
+Deployed App: https://dry-scrubland-39382.herokuapp.com/
+
 AS A foodie,
 I WANT TO keep track of food I would like to eat and have eaten,
 SO THAT I can know what to try next
