@@ -1,6 +1,50 @@
-.toEat{
-    background: white;
+.addBurger{
+    background: lemonchiffon;
+    border: solid black 1px;
 }
+
+body{
+    background: gold;
+}
+
+.eaten, .toEat{
+    font-family: cursive;    
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 10em;
+}
+
 .eaten{
     background: springgreen;
+    border: navy solid 2px;
+    border-radius: 8px;
+    display: block;
+    margin: 1em;
+}
+
+footer{
+    background: gold;
+    height: 4em;
+}
+
+h1{
+    padding-bottom: .5em;
+}
+
+header{
+    color: lemonchiffon;
+    padding-bottom: 3em;
+    text-align: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
+
+main{
+    background: brown;
+}
+
+.toEat{
+    background: salmon;
+    border-radius: 8px;
+    margin: .5em;
 }

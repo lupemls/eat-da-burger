@@ -21,8 +21,8 @@ const makeStatement = (obj) => {
 
 // Object for all our SQL statement functions.
 const orm = {
-    selectAll: function (tableInput, cb) {
-        const queryString = `SELECT * FROM ${tableInput}`;
+    selectAll: function (table, cb) {
+        const queryString = `SELECT * FROM ${table}`;
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;

@@ -1,42 +1,46 @@
-<h1>Eat-Da-Burger!</h1>
+<header>
+  <h1>Eat-Da-Burger!</h1>
+
+  <h2>Add A Burger</h2>
+
+  <div class="row">
+    <div class="col s12" id="newBurg">
+      <form action="/api/burgers" method="POST">
+        <input type="text" id="name" name="burger_name">
+        <button type="submit" class="addBurger">Add Burger</button>
+      </form>
+    </div>
+  </div>
+</header>
 
 <main>
   <div class="container">
     <div class="row">
       <div class="col s6">
         {{#each burgers}}
-          {{#unless this.devoured}}
-            <div>
-              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class='toEat'> {{this.burger_name}}</button>
-              </form>
-            </div>
-          {{/unless}}
+        {{#unless this.devoured}}
+        <div>
+          <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
+            <button type="submit" class='toEat'> {{this.burger_name}}</button>
+          </form>
+        </div>
+        {{/unless}}
         {{/each}}
       </div>
 
       <div class="col s6">
         {{#each burgers}}
-          {{#if this.devoured}}
-            <div class='eaten'>
-              <div>
-                {{this.burger_name}}
-              </div>
-            </div>
-          {{/if}}
+        {{#if this.devoured}}
+        <div class='eaten'>
+          <div>
+            {{this.burger_name}}
+          </div>
+        </div>
+        {{/if}}
         {{/each}}
       </div>
     </div>
   </div>
 </main>
 
-<h2>Add A Burger</h2>
-
-<div class="row">
-  <div class="col s12">
-    <form action="/api/burgs" method="POST">
-      <input type="text" id="name" name="burger_name">
-      <button type="submit" class="addBurgerButton">Add Burger</button>
-    </form>
-  </div>
-</div>
+<footer/>

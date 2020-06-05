@@ -9,13 +9,13 @@ router.get("/", (req,res) => {
     });
 });
 
-router.post("/api/burgs", (req,res) => {
+router.post("/api/burgers", (req,res) => {
     burger.insertOne(["burger_name"], [req.body.burger_name], data => {
         res.redirect('/');
     })
 })
 
-router.put('/burgers/:id', (req, res) => {
+router.put('/api/burgers/:id', (req, res) => {
   var condition = 'id = ' + req.params.id;
 
   burger.updateOne({
